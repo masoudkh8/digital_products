@@ -10,14 +10,14 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):#ModelSerialize
 
 
 class FileSerializer(serializers.ModelSerializer):
-    #file_type = serializers.SerializerMethodField()
+    file_type = serializers.SerializerMethodField()
     class Meta:
         model = File
         fields = ('id','title', 'file', 'file_type')
         #fields = ('id', 'title', 'file', 'file_type')
 
-    #def get_file_type(self, obj):
-    #    return obj.get_file_type_display()
+    def get_file_type(self, obj):
+        return obj.get_file_type_display()
 
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer): #HyperlinkedModelSerializer):
