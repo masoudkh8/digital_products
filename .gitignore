@@ -1,6 +1,11 @@
 .idea/
 venv/
+
 **/__pycache__/
+*.pyc
+
 media/
 db.sqlite3
-*.pyc
+
+local_settings.py
+
