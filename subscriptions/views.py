@@ -19,6 +19,8 @@ class SubscriptionView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self,request):
+        print(request.user)
+        print("+++++++++++++++++++++++++++")
         subscriptions = Subscription.objects.filter(
             user =request.user,
             expire_time__gt= timezone.now()

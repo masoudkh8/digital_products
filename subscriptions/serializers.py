@@ -9,7 +9,6 @@ class PackageSerializer(serializers.ModelSerializer):
 
 class SubscriptionSerializer(serializers.ModelSerializer):
     package = PackageSerializer
-
     class Meta:
         model = Subscription
-        fields = ('Package','created_time','expire_time')
+        fields = ('package','created_time','expire_time')
